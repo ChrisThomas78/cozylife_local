@@ -1,5 +1,13 @@
 # CozyLife Local for Home Assistant
 
+> **Fork note (ChrisThomas78):** based on upstream v1.1.7 plus one fix for
+> "Smart colorful lights" / DreamColor strips (pid `v3sjfa`). These strips ignore
+> dpid 5/6 and report and accept colour as dpid 16 = `HHHHSSSSVVVV` hex
+> (hue 0–360, saturation 0–1000, `VVVV` = `ffff`). The device applies dpid 16 only
+> when dpid 2 (work mode 0) is in the same command. With this fork, HA reads and
+> sets the colour of these strips. Installed via HACS from the default branch, as
+> there are no release zips. Upstream: https://github.com/soulripper13/cozylife_local
+
 [![GitHub Release](https://img.shields.io/github/release/soulripper13/cozylife_local.svg?style=for-the-badge)](https://github.com/soulripper13/cozylife_local/releases)
 [![GitHub License](https://img.shields.io/github/license/soulripper13/cozylife_local.svg?style=for-the-badge)](https://github.com/soulripper13/cozylife_local/blob/main/LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/soulripper13/cozylife_local.svg?style=for-the-badge)](https://github.com/soulripper13/cozylife_local/issues)
